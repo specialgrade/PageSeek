@@ -21,4 +21,4 @@ This repository contains the code and assets for **PageSeek**, a **Library Manag
 - Notifications & Alerts → Sends automated reminders and updates.
 
 ## GUI
-![LoFi Wireframe](/frontend/gui/lofi/Librarian%20Dashboard.png)
+![LoFi Wireframe](/frontend/gui/lofi/Wireframe.png)

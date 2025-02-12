@@ -19,4 +19,6 @@ This repository contains the code and assets for **PageSeek**, a **Library Manag
 - Fine Management → Tracks overdue fines and payments.
 - Borrowing & Returning Books → Handles book lending and return processes.
 - Notifications & Alerts → Sends automated reminders and updates.
-  
+
+## GUI
+![LoFi Wireframe](frontend\gui\lofi\Librarian Dashboard.png)

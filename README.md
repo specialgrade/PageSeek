@@ -1,4 +1,5 @@
 # PageSeek
+The objective of this project is to learn and apply web development and database management by creating a Library Management System application.
 
 ## 🗂️ About the File
 

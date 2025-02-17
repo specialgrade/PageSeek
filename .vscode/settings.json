@@ -1,27 +1,12 @@
 {
     "sqltools.connections": [
         {
-            "mysqlOptions": {
-                "authProtocol": "xprotocol",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 33060,
-            "driver": "MySQL",
-            "name": "MySQL Local",
-            "database": "demo",
-            "username": "root",
-            "password": "mysqldatabase_pass/#25",
-            "connectionTimeout": 30
-        },
-        {
             "previewLimit": 50,
             "server": "localhost",
             "port": 5432,
             "driver": "PostgreSQL",
             "name": "PG Local",
-            "database": "filmsdb",
+            "database": "pageseek",
             "username": "postgres",
             "password": "pgdatabase",
             "connectionTimeout": 30

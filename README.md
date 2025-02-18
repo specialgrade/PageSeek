@@ -20,5 +20,8 @@ This repository contains the code and assets for **PageSeek**, a **Library Manag
 - Borrowing & Returning Books → Handles book lending and return processes.
 - Notifications & Alerts → Sends automated reminders and updates.
 
+## Database Schema
+![PageSeek Database Schema](/database/pageseekDB%20schema.png)
+
 ## Wireframe
 ![LoFi Wireframe](/frontend/gui/lofi/Wireframe.png)

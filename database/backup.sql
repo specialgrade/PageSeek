@@ -1,4 +1,4 @@
- --Table Definitions (To Review)
+ --Table Definitions (Open for Revisions)
  CREATE TABLE categories (
     category_id SERIAL PRIMARY KEY,
     category_name VARCHAR(50) NOT NULL
@@ -32,7 +32,7 @@
 
  CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
-    role VARCHAR(50) NOT NULL, --change to ENUM
+    role ENUM('student', 'teacher', 'librarian') NOT NULL, 
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL
  );
@@ -40,7 +40,7 @@
  CREATE TABLE book_copies (
     copy_id SERIAL PRIMARY KEY,
     book_id INT,
-    status VARCHAR(50) NOT NULL, --change to ENUM
+    status ENUM('available', 'borrowed', 'reserved', 'lost', 'damaged') NOT NULL, 
     FOREIGN KEY (book_id) REFERENCES books(book_id)
  );
 
@@ -50,7 +50,7 @@
     user_id INT,
     reservation_date DATE,
     expiration_date DATE,
-    status VARCHAR(50) NOT NULL, --change to ENUM
+    status ENUM('active', 'fulfilled', 'cancelled', 'expired') NOT NULL, 
     FOREIGN KEY (book_id) REFERENCES books(book_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
  );
@@ -77,7 +77,7 @@
     borrow_date DATE,
     due_date DATE,
     return_date DATE,
-    status VARCHAR(50) NOT NULL, --change to ENUM
+    status ENUM('borrowed', 'returned', 'overdue') NOT NULL, 
     FOREIGN KEY (book_id) REFERENCES books(book_id),
     FOREIGN KEY (borrower_id) REFERENCES users(user_id),
     FOREIGN KEY (librarian_id) REFERENCES librarians(librarian_id)
@@ -87,7 +87,7 @@
     fine_id SERIAL PRIMARY KEY,
     borrow_id INT,
     amount DECIMAL(10, 2),
-    status VARCHAR(50) NOT NULL, --change to ENUM
+    status ENUM('paid', 'unpaid') NOT NULL, 
     paid_date DATE,
     FOREIGN KEY (borrow_id) REFERENCES borrowing_records(borrow_id)
  );
